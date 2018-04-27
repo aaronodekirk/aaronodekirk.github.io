@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width:100vw;
+    overflow-x: hidden;
+    margin:0;
+}
+footer {
+    margin-left:2%;
+}
+
+.header h1 {
+    font-size:60px;
+    font-weight:100;
+}
+.header h2 {
+    font-size:42px;
+     font-weight:100;
+}
+nav {
+    background-color:#12295d;
+    text-decoration:none;
+    font-size:24px;
+    text-align:center;
+}
+nav a {
+    padding:10px;
+    display:inline-block;
+}
+nav a:hover {
+    background-color:#CBCBCB;
+    color:black;
+}
+p {
+    letter-spacing:.05em;
+}
+.nav {
+    color:white;
+    text-decoration:none;
+}
+.nav-active {
+    background-color:#CBCBCB;
+    color:black
+}
+main{
+    margin:0vh 7vw;
+}
+
+main h1 {
+    background-color:#12295d;
+    padding:10px;
+    color:white;
+    text-align:center;
+    font-size:48px;
+    font-weight:100;
+}
+.header {
+    background-image:url("images/arduino.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: 50% 20%
+}
+.darken div {
+    background:rgba(0,0,0,0.4);
+}
+.head {
+    color:white;
+    padding:15vh 0;
+    text-align:center;
+}
+.flex {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+#blog {
+    display:inline-block;
+}
+.post{
+    border:solid #EDEDED;
+    border-radius:5px;
+    max-width:400px;
+    margin:10px;
+    overflow:hidden;
+}
+.post h3 {
+    padding:10px;
+    min-height:2.5em;
+    margin:0;
+    background-color:#cbcbcb;
+    font-size:24px;
+     font-weight:100;
+
+}
+.post > img {
+    width:100%;
+    transition: transform .2s;
+    max-height:25%;
+    object-fit:cover;
+}
+
+.post p {
+    margin:0px 15px;
+}
+.blog p {
+    padding:10px;
+}
+.spacer {
+    padding:10px;
+}
+
+.round {
+    border-radius:50%;
+    max-width:50px;
+    max-height:50px;
+    border:1px solid black;
+    display:inline-block;
+    margin-left:2px;
+}
+.round img {
+    max-width:100%;
+    max-height:100%;
+
+    border-radius:50%;
+}
+#education h2 {
+    padding:10px;
+    background-color:#CBCBCB;
+}
+.ico {
+    width:20px;
+    height:20px;
+}
+.card {
+    max-width:300px;
+    border-radius:5px;
+    margin:5px;
+    border:1px solid #CBCBCB;
+}
+
+.card h3 {
+    background-color:#CBCBCB;
+    padding:5px;
+    margin:0;
+    min-height:2.5em;
+}
+.card p {
+    padding:5px;
+}
+.card a,.flex a {
+    text-decoration:none;
+    color:black;
+}
+.card:hover,.post:hover {
+    box-shadow:3px 3px #CBCBCB;
+    transition:0.3s;
+}
+.container {
+    position: relative;
+    padding-top:50%;
+}
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:200%;
+    border: 0;
+}
+#nav {
+    bottom:1%;
+    right:1%;
+    position:fixed;
+    display:block;
+    padding:10px;
+}
+#nav div {
+    background-color:#FFFFFF;
+    display:inline-block;
+}
+.button {
+    padding:10px;
+    background-color:#12295d;
+    text-decoration:none;
+    color:white;
+    margin:10px;
+    display:inline-block;
+}
+.button:hover {
+    background-color:#CBCBCB;
+    color:black;
+}
+.spacer {
+    margin:30px;
+    display:block;
+}
+
+@media only screen and (max-width: 600px)
+ {
+    .round {
+        display:inline-block
+    }
+    #nav {
+        bottom:1%;
+        right:17%;
+    }
+    .card {
+        max-width:80%;
+    }
+    .round {
+        border-radius:50%;
+        max-width:40px;
+        max-height:40px;
+        border:0px solid black;
+        display:inline-block;
+        margin-left:2px;
+        background-color:#FFFFFF;
+    }
+
+    .header h1 {
+        font-size:40px;
+        font-weight:100;
+    }
+    .header h2 {
+        font-size:26px;
+         font-weight:100;
+    }
+}

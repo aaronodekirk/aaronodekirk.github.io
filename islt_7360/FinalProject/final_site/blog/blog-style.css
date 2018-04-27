@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width:100vw;
+    overflow-x: hidden;
+    margin:0;
+}
+.header h1 {
+    font-size:60px;
+    font-weight:100;
+}
+.header h2 {
+    font-size:42px;
+     font-weight:100;
+}
+nav {
+    background-color:#12295d;
+    text-decoration:none;
+    font-size:24px;
+    text-align:center;
+}
+nav a {
+    padding:10px;
+    display:inline-block;
+}
+nav a:hover {
+    background-color:#CBCBCB;
+    color:black;
+}
+p {
+    letter-spacing:.05em;
+}
+.nav {
+    color:white;
+    text-decoration:none;
+}
+.nav-active {
+    background-color:#CBCBCB;
+    color:black
+}
+main{
+    margin:0vh 7vw;
+}
+
+main h1 {
+    background-color:#12295d;
+    padding:10px;
+    color:white;
+    text-align:center;
+    font-size:48px;
+     font-weight:100;
+}
+.header {
+    background-image:url("../images/arduino.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: 50% 20%
+}
+.darken div {
+    background:rgba(0,0,0,0.4);
+}
+.head {
+    color:white;
+    padding:15vh 0;
+    text-align:center;
+}
+
+main img {
+    width:50%;
+    height:25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit:cover;
+}
+table {
+    border-collapse:collapse;
+}
+td {
+    border: 1px solid black;
+    padding:10px;
+}
+.spacer {
+    padding:10px;
+}
+
+footer {
+    text-align:left;
+    margin-left:2%;
+}
