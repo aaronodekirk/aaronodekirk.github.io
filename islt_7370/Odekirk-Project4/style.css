@@ -1,0 +1,63 @@
+body {
+    background-color: #fffdd0;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    font-family: Pangolin;
+    font-size:1.5em;
+    letter-spacing: .5em;
+    text-decoration:underline;
+    text-transform:capitalize;
+}
+
+h2 {
+    font-family: Badaboom_bbregular;
+    font-size: 1.25em;
+    letter-spacing: 0.2em;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-decoration: line-through;
+    text-transform: lowercase;
+}
+
+p {
+    word-spacing: 0.25em;
+    text-indent: 3em;
+    margin-left: 3em;
+    border: 1px solid red;
+    line-height: 1.5;
+    font-size:14px;
+}
+li {
+    font-size:14px;
+}
+
+blockquote {
+    font-family: helvetica arial sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: 0.9em;
+    text-decoration: blink;
+    text-align:center;
+}
+
+.highlight {
+    background-color:yellow;
+}
+.sub {
+    vertical-align:sub;
+}
+.sup {
+    vertical-align:super;
+}
+#specialtext{
+    font-size:30px;
+}
