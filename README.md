@@ -1,3 +1,3 @@
 # aaronodekirk.github.io
 
-Personal website for ISLT 7360
+Personal website for University of Missouri Coursework
