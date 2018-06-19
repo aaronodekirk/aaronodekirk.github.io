@@ -1,0 +1,159 @@
+* {margin:0; padding:0;}
+body {
+	font-family:helvetica, arial, sans-serif;
+	background-color: #dcd9c0;
+	}
+#wrapper {
+	min-width:760px; max-width:1100px; margin:0 auto; border:1px solid; overflow:hidden;
+	}
+header {
+	background:#f00;
+	background-color:#000;
+	}
+header h1 {
+	font-family:'Droid Sans';
+	font-weight:400;
+	font-size:4em;
+	letter-spacing:-.05em;
+	color:#fff;
+	padding:0 0 5px 10px;
+	}
+nav {
+	display:table-cell;
+	width:150px;
+	background:#dcd9c0;
+	padding:10px;
+	background-color:#F5DEB3;
+	}
+nav li {
+	list-style-type:none;
+	}
+nav a {
+	font-family:'Open Sans Condensed';
+	font-weight:700;
+	font-size:.85em;
+	color:#616161;
+	}
+article {
+	display:table-cell;
+	background:#ffed53;
+	padding:10px 20px;
+	background-color:#fff;
+	}
+article h1 {
+	font-family:'Droid Sans';
+	font-weight:700;
+	font-size:1.5em;
+	letter-spacing:-.05em;
+	color:#616161;
+	}
+article h2 {
+	font-family:'Droid Sans';
+	font-weight:700;
+	font-size:1.25em;
+	letter-spacing:-.05em;
+	color:#616161;
+	text-decoration:overline;
+	margin:10px 0 0 0;
+	}
+article p {
+	font-family:'Open Sans Condensed';
+	font-weight:300;
+	font-size:1em;
+	color:#000;
+	}
+aside {
+	display:table-cell;
+	width:210px;
+	background:#3f7ccf;
+	padding:10px;
+	background-color:#F5DEB3;
+	}
+aside h3 {
+	font-family:'Open Sans Condensed';
+	font-weight:700;
+	letter-spacing:-.075em;
+	color: #000;
+	}
+aside p {
+	font-family:'Open Sans Condensed';
+	font-weight:700;
+	font-size:.85em;
+	line-height:1.2em;
+	color: #000
+	}
+footer {
+	clear:both;
+	background:#000;
+	text-align:center;
+	}
+footer p {
+	font-family:'Open Sans';
+	font-weight:700;
+	font-size:.65em;
+	color:#fff;
+	}
+footer a {
+	font-family:'Open Sans';
+	font-weight: 700 italic;
+	font-size:1em;
+	color:#ffed53;
+	text-decoration:none;
+	}
+.list0 ul {
+	border:1px solid #f00;
+	border-radius:3px; padding:5px 10px 3px;
+	}
+.list0 li {
+	list-style-type:none;
+	padding:3px 10px;
+	}
+.list0 li + li {
+	border-top:1px solid #f00;
+	}
+.list0 a {
+	text-decoration:none;
+	font:20px 'Exo', helvetica, arial, sans-serif;
+	font-weight:400;
+	color:#000;
+	}
+.list0 a:hover {
+	color:#069;
+	}
+
+figure {
+
+	margin:20px 20px;			/* space between boxes */
+	position:relative; /* positioning context for popups */
+
+	}
+img {display:block;}/* remove baseline spacing from under image */
+figcaption {
+	display:none; /* hides popups */
+	position:absolute; /* relative to images */
+	left:15%; top:14px; /* positions popup on right side of image */
+	width:130px; /* width of popup */
+	padding:10px; /* space around popup content */
+	background:#f2eaea;
+	border:3px solid red; border-radius:6px;
+	}
+figure:hover figcaption {display:block; z-index:2;} /* displays popup when image is hovered */
+figcaption h3 { /* popup content */
+	font-size:14px;
+	color:#666;
+	margin-bottom:6px;
+	}
+figcaption a { /* popup content */
+	display:block;
+	text-decoration:none;
+	font-size:12px;
+	color:#000;
+	}
+figcaption:after { /* red triangle box*/
+	content:""; /* some content required - using empty text string */
+	position:absolute; /* relative to popup */
+	border:12px solid;
+	border-color:transparent red transparent transparent;
+	right:100%; top:17px;
+	height:0px; width:0px; /* collapses box to create triangle */
+	}
