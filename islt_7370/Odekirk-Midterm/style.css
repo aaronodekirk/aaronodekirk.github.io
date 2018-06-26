@@ -1,0 +1,152 @@
+* {margin:0; padding:0;}
+body {
+	font-family:helvetica, arial, sans-serif;
+	background:#dcd9c0;
+	}
+
+#wrapper {
+	margin:10px;
+	overflow:hidden;
+	border-radius:5px;
+	padding:10px;
+	}
+img {
+	padding:20px;
+}
+header {
+	background:#000;
+	margin:10px 0px;
+	border-radius:5px;
+	box-shadow:4px 4px 2px #888888;
+	text-align:center;
+	padding:30px 0px;
+	}
+header h1 {
+	font-family:'Droid Sans';
+	font-weight:400;
+	font-size:2em;
+	letter-spacing:-.05em;
+	color:#fff;
+	padding:0 0 5px 10px;
+	display:block;
+	}
+nav {
+	display:block;
+	/*width:150px;
+	background:#F5DEB3;*/
+	padding:10px;
+	margin-left:50px;
+	bottom:10px;
+	}
+nav li {
+	list-style-type:none;
+	}
+nav a {
+	font-family:'Open Sans Condensed';
+	font-weight:700;
+	font-size:1em;
+	color:#FFFFFF;
+	margin:10px;
+	}
+
+article {
+	display:block;
+	background:#fff;
+	padding:30px 30px;
+	border-radius:5px;
+	box-shadow:4px 4px 2px #888888;
+	}
+article h1 {
+	font-family:'Droid Sans';
+	font-weight:700;
+	font-size:1.5em;
+	letter-spacing:-.05em;
+	color:#616161;
+	}
+article h2 {
+	font-family:'Droid Sans';
+	font-weight:700;
+	font-size:1.25em;
+	letter-spacing:-.05em;
+	color:#616161;
+	text-decoration:overline;
+	margin:10px 0 0 0;
+	}
+article p {
+	font-family:'Open Sans Condensed';
+	font-weight:300;
+	font-size:1em;
+	color:#000;
+
+	}
+section {
+	padding:30px;
+}
+aside {
+	display:block;
+	background:#F5DEB3;
+	padding:10px;
+	border-radius:5px;
+	margin:10px 0px;
+	box-shadow:4px 4px 2px #888888;
+	}
+aside h3 {
+	font-family:'Open Sans Condensed';
+	font-weight:700;
+	letter-spacing:-.075em;
+	color:#000;
+	}
+aside p {
+	font-family:'Open Sans Condensed';
+	font-weight:700;
+	font-size:.85em;
+	line-height:1.2em;
+	color:#000;
+	}
+footer {
+	clear:both;
+	background:#000;
+	text-align:center;
+	margin:10px 0px;
+	border-radius:5px;
+	padding:20px;
+	box-shadow:4px 4px 2px #888888;
+	}
+footer p {
+	font-family:'Open Sans';
+	font-weight:700;
+	font-size:.65em;
+	color:#fff;
+	}
+footer a {
+	font-family:'Open Sans';
+	font-weight:700 italic;
+	font-size:1em;
+	color:#ffed53;
+	text-decoration:none;
+	}
+blockquote {
+	text-align:center;
+}
+
+
+@media only screen and (min-width: 1050px) {
+	#wrapper {
+		min-width:760px;
+		max-width:1100px;
+	}
+	article {
+		display:table-cell;
+	}
+	aside {
+		display:table-cell;
+		width:210px;
+	}
+	nav {
+		display:inline-block;
+	}
+	header h1 {
+		display:inline-block;
+		font-size:4em;
+	}
+}
