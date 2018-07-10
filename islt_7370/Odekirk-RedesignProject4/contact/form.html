@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Financial Services, LLC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../helper.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Financial Services, LLC</h1>
+      <h2>Contact</h2>
+    </div>
+    <nav id="desktop-wrapper">
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../education.html">Education</a>
+        <a href="../about.html">About</a>
+        <a class="active" href="form.html">Contact</a>
+        <a href="../gallery/gallery.html" target="_blank">Gallery</a>
+    </nav>
+
+    <div id="mobile-wrapper">
+      <div id="mobile-nav" onclick="menu()">
+        <div id="hamburger">
+          <div class="mobile-menu"></div>
+          <div class="mobile-menu"></div>
+          <div class="mobile-menu"></div>
+        </div>
+      </div>
+      <div id="menu" style="display:none">
+          <a href="../index.html">Home</a>
+          <a href="../services.html">Services</a>
+          <a href="../education.html">Education</a>
+          <a href="../about.html">About</a>
+          <a class="active" href="form.html">Contact</a>
+          <a href="../gallery/gallery.html" target="_blank">Gallery</a>
+      </div>
+
+    </div>
+    <main>
+      <!--<div class="banner">
+        <div class="banner-img" style=""></div>
+      </div>-->
+      <form id="contact-form" onsubmit="return formValidate()">
+        <h3>Name: </h3>
+        <input name="name">
+        <h3>Comments</h3>
+        <textarea name="comments" rows="3"></textarea>
+        <h3>Email</h3>
+        <input type="email" name="email">
+        <h3>Phone</h3>
+        <input type="tel" name="phone">
+        <div class="padding"></div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="padding"></div>
+    </main>
+  </body>
+  <script>
+    function formValidate() {
+      var name = document.forms["contact-form"]["name"].value;
+      if(name =="")
+      {
+        alert("Name is required to submit")
+        return false;
+      }
+    }
+  </script>
+</html>
