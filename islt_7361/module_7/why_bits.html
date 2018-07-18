@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="helper.js"></script>
     </head>
     <body>
         <div class="header">
           <h1>Fundamentals of Computing</h1>
-          <h2>Why Bits?</h2>
         </div>
         <div id="mobile-wrapper">
-            <a id="mobile-nav" href="javascript:void(0);" onclick="menu()">
+            <a id="mobile-nav">
             <div id="hamburger">
               <div class="mobile-menu"></div>
               <div class="mobile-menu"></div>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <main style="display:none">
-            <h2>Fundamental Components of Computers</h2>
+            <h2>Why Bits?</h2>
             <h3>Learning Objective</h3>
             <p>By listening to this short audio clip you will be able to recall and explain why we use 1's and 0's in computers to represent information</p>
             <h3>Instructions</h3>
@@ -50,6 +50,16 @@
             $("main").slideUp(400);
             setTimeout(function(){window.open(destination,"_self")},400);
         }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
         $(document).ready($("main").slideDown(600))
     </script>
 </html>

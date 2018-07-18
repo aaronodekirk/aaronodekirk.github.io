@@ -5,12 +5,11 @@
         <meta charset="UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="helper.js"></script>
+
     </head>
     <body>
         <div class="header">
           <h1>Fundamentals of Computing</h1>
-          <h2>Basic Components of Computers?</h2>
         </div>
     <div id="mobile-wrapper">
         <a id="mobile-nav" href="javascript:void(0);" onclick="menu()">
@@ -36,7 +35,9 @@
             </div>
         </div>
         <main style="display:none">
-            <h2>Fundamental Components of Computers</h2>
+            <h2>Basic Components of Computers</h2>
+            <h3>Purpose</h3>
+            <p>The purpose of this interactive site is to expose you to the fundamental components of computers, concepts around why we use 1's and 0's in computing, and how different components interact to make the devices we use today. Navigate through this site using either the arrows at the bottom or navigation menu at the top. Once you have looked through the pages, please take the quiz based on the content on this site. You will have one attempt at the quiz, which will record your email. If you leave the quiz before submitting your answers will not be saved.</p>
             <h3>Learning Objective</h3>
             <p>By viewing this graphic, the goal is for you to be able to know and understand the fundamental components of computers and micro-controllers, however the focus will be on computers.</p>
             <h3>Instructions</h3>
@@ -51,6 +52,16 @@
             $("main").slideUp(400);
             setTimeout(function(){window.open(destination,"_self")},400);
         }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
         $(document).ready($("main").slideDown(600))
     </script>
 </html>

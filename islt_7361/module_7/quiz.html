@@ -9,7 +9,6 @@
     <body>
         <div class="header">
           <h1>Fundamentals of Computing</h1>
-          <h2>Quiz</h2>
         </div>
 
         <div id="nav">
@@ -18,7 +17,7 @@
             </div>
         </div>
         <div id="mobile-wrapper">
-            <a id="mobile-nav" href="javascript:void(0);" onclick="menu()">
+            <a id="mobile-nav">
             <div id="hamburger">
               <div class="mobile-menu"></div>
               <div class="mobile-menu"></div>
@@ -33,7 +32,8 @@
           </div>
         </div>
         <main style="display:none">
-            <h2>Directions</h2>
+            <h2>Quiz</h2>
+            <h3>Directions</h3>
             <p>Please take the quiz below. Please note that if you leave this page your answers will not be saved. You will be able to submit a maximum of 1 responses. Your email address will be recorded. You will need to scroll to see the entire quiz</p>
             <a class="button" href="https://goo.gl/forms/e7kSCaXXSjnuvrxg2" target="_blank">Open form in new tab</a>
             <div style="text-align:center">
@@ -47,6 +47,16 @@
             $("main").slideUp(400);
             setTimeout(function(){window.open(destination,"_self")},400);
         }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
         $(document).ready($("main").slideDown(600))
     </script>
 </html>
