@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="helper.js"></script>
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+          <h2>Basic Components of Computers?</h2>
+        </div>
+    <div id="mobile-wrapper">
+        <a id="mobile-nav" href="javascript:void(0);" onclick="menu()">
+        <div id="hamburger">
+          <div class="mobile-menu"></div>
+          <div class="mobile-menu"></div>
+          <div class="mobile-menu"></div>
+        </div>
+        </a>
+      <div id="menu" style="display:none">
+          <a class="active" href="index.html">Basic Components of Computers</a>
+          <a class="inactive" href="why_bits.html">Why Bits?</a>
+          <a class="inactive" href="putting_it_together.html">Putting it Together</a>
+          <a class="inactive" href="quiz.html">Quiz</a>
+      </div>
+
+    </div>
+        <main>
+
+        <div id="nav">
+            <div class="round" title="next">
+                <img src="nav-arrow.png" onclick="nav('why_bits.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <main style="display:none">
+            <h2>Fundamental Components of Computers</h2>
+            <h3>Learning Objective</h3>
+            <p>By viewing this graphic, the goal is for you to be able to know and understand the fundamental components of computers and micro-controllers, however the focus will be on computers.</p>
+            <h3>Instructions</h3>
+            <p>Please review the following images and take notes on their components. You will see this image referenced in other places during this lesson</p>
+            <img src="project-1.png" style="max-width:98%"/>
+            <a href="files/project1-image.png" download>Download Original - 320KB</a>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>

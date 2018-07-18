@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+    margin:0;
+}
+footer {
+    margin-left:2%;
+}
+.header {
+    background-color:#12295d;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.header h1 {
+    font-size:60px;
+    font-weight:100;
+}
+.header h2 {
+    font-size:42px;
+     font-weight:100;
+}
+nav {
+    background-color:#12295d;
+    text-decoration:none;
+    font-size:24px;
+    text-align:center;
+}
+nav a {
+    padding:10px;
+    display:inline-block;
+}
+nav a:hover {
+    background-color: #EFEFEF;
+    color:black;
+}
+p {
+    letter-spacing:.05em;
+}
+.nav {
+    color:white;
+    text-decoration:none;
+}
+.nav-active {
+    background-color: #EFEFEF;
+    color:black
+}
+main{
+    margin:0vh 7vw;
+    width:86%;
+}
+
+main h2{
+    background-color: #EFEFEF;
+    padding:10px;
+}
+
+.flex {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.spacer {
+    padding:10px;
+}
+
+.round {
+    border-radius:50%;
+    max-width:50px;
+    max-height:50px;
+    border:1px solid black;
+    display:inline-block;
+    margin-left:2px;
+}
+.round img {
+    max-width:100%;
+    max-height:100%;
+
+    border-radius:50%;
+}
+
+.ico {
+    width:20px;
+    height:20px;
+}
+.card {
+    max-width:300px;
+    border-radius:5px;
+    margin:5px;
+    border:1px solid  #EFEFEF;
+}
+
+.card h3 {
+    background-color: #EFEFEF;
+    padding:5px;
+    margin:0;
+    min-height:2.5em;
+}
+.card p {
+    padding:5px;
+}
+.card a,.flex a {
+    text-decoration:none;
+    color:black;
+}
+.card:hover,.post:hover {
+    box-shadow:3px 3px  #EFEFEF;
+    transition:0.3s;
+}
+.container {
+    position: relative;
+    padding-top:50%;
+}
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:200%;
+    border: 0;
+}
+#nav {
+    bottom:1%;
+    right:1%;
+    position:fixed;
+    display:block;
+    padding:10px;
+}
+#nav div {
+    background-color:#FFFFFF;
+    display:inline-block;
+}
+.button {
+    padding:10px;
+    background-color:#12295d;
+    text-decoration:none;
+    color:white;
+    margin:10px;
+    display:inline-block;
+}
+.button:hover {
+    background-color: #EFEFEF;
+    color:black;
+}
+.spacer {
+    margin:30px;
+    display:block;
+}
+.rotate {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+    #mobile-wrapper {
+        display:block;
+        position:sticky;
+        top:0;
+    }
+
+.mobile-menu {
+    border-top-width:3px;
+    border-top-style:solid;
+    padding:0px;
+    margin:0px;
+    padding:2px;
+}
+#hamburger {
+    width:20px;
+    padding:10px 30px;
+    margin-right:12vw;
+    float:right;
+}
+#mobile-nav {
+    width:100%;
+    height:40px;
+    text-decoration:none;
+    color:black;
+    background-color:#EFEFEF;
+    display:block;
+}
+
+
+#menu {
+    border:1px solid black;
+    margin:0 12vw;
+    background-color:#EFEFEF;
+}
+
+#menu a {
+
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    border-top:0.5px solid black;
+}
+#menu a:hover {
+    background-color:#12295d;
+    color:white;
+}
+.active {
+    background-color:#12295d;
+    color:white;
+}
+.inactive{
+    color:black;
+}
+
+@media only screen and (max-width: 600px)
+ {
+    .round {
+        display:inline-block
+    }
+    #nav {
+        bottom:1%;
+        right:17%;
+    }
+    .card {
+        max-width:80%;
+    }
+    .round {
+        border-radius:50%;
+        max-width:40px;
+        max-height:40px;
+        border:0px solid black;
+        display:inline-block;
+        margin-left:2px;
+        background-color:#FFFFFF;
+    }
+
+    .header h1 {
+        font-size:40px;
+        font-weight:100;
+    }
+    .header h2 {
+        font-size:26px;
+         font-weight:100;
+    }
+}

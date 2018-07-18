@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+          <h2>Why Bits?</h2>
+        </div>
+        <div id="mobile-wrapper">
+            <a id="mobile-nav" href="javascript:void(0);" onclick="menu()">
+            <div id="hamburger">
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+            </div>
+            </a>
+          <div id="menu" style="display:none">
+              <a class="inactive" href="index.html">Basic Components of Computers</a>
+              <a class="active" href="why_bits.html">Why Bits?</a>
+              <a class="inactive" href="putting_it_together.html">Putting it Together</a>
+              <a class="inactive" href="quiz.html">Quiz</a>
+          </div>
+        </div>
+
+        <div id="nav">
+            <div class="round rotate" title="back">
+                <img src="nav-arrow.png" onclick="nav('index.html')" alt="nav icon"/>
+            </div>
+           <div class="round" title="next">
+                <img src="nav-arrow.png" onclick="nav('putting_it_together.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <main style="display:none">
+            <h2>Fundamental Components of Computers</h2>
+            <h3>Learning Objective</h3>
+            <p>By listening to this short audio clip you will be able to recall and explain why we use 1's and 0's in computers to represent information</p>
+            <h3>Instructions</h3>
+            <p>Please listen to this audio clip, you will be expected to be able to explain why we use 1's and 0's in computing instead of other number systems.</p>
+            <audio controls src="why_bits.mp3"> Why Bits?</audio>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>
