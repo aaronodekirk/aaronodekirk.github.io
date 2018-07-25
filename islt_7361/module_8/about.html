@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="helper.js"></script>
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+        </div>
+        <div id="mobile-wrapper">
+            <a id="mobile-nav">
+            <div id="hamburger">
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+            </div>
+            </a>
+          <div id="menu" style="display:none">
+              <a class="inactive" href="index.html">Basic Components of Computers</a>
+              <a class="inactive" href="why_bits.html">Why Bits?</a>
+              <a class="inactive" href="putting_it_together.html">Putting it Together</a>
+              <a class="inactive" href="quiz.html">Quiz</a>
+              <a class="active" href="about.html">About</a>
+          </div>
+        </div>
+
+        <div id="nav">
+            <div class="round rotate" title="back">
+                <img src="nav-arrow.png" title="quiz" onclick="nav('quiz.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <main style="display:none">
+            <h2>About</h2>
+            <h3>Why</h3>
+            <p>This website was created as a part of an Introduction to Digital Media class through the University of Missouri and was designed to utilize and implement fundamental digital media concepts while meeting a series of learning targets.</p>
+            <h3>Digital Media Principles</h3>
+            <h4>Contrast</h4>
+            <p>This website utilizes a two-tone color scheme I am fond of, with a light gray to provide background for different header elements on the website. The color palette was created with the online too <a href="http://paletton.com/" target="_blank">paletton.com</a></p>
+            <h4>Repetition</h4>
+            <p>The website uses a repeating style for each page with a large header element containint the title and page number users are currently on. This is followed by a mobile style dropdown navigation menu, a title as an H2 element, and the additional information. This style is repeated across pages of the website to help consistency and viewer retention</p>
+            <h4>Alignment</h4>
+            <p>I designed this website to use a left aligned and mobile friendly style with ample padding between letters and elements. Content on the website is designed to be commonly aligned and consistent across multiple size windows.</p>
+            <h4>Proximity</h4>
+            <p>The page uses a common style sheet and spacing between different elements to keep common elements close together and commonly grouped.</p>
+            <h3>Learning Outcomes</h3>
+            <p>Each of the different pages on the site is designed to meet a different learning objective, promoting users toward understanding more about the fundamental components of a computer and how they interact. The first page starts with the very basics and discusses components in isolation. This is meant to give users an idea of the function of each device, abstracting away how they interact for the time being. After viewieng this, users understand what the components are and that we use 1's a nd 0's, but not why. The audio component answers this question which is important to understand before proceeding further. After listenting to this audio, viewers should understand more about why we design computers to use 1's and 0's. The next step is to put this information together and learn about how these different components and bits interact to form, on an abstract level, the devices we use today. This is accomplished with a video illustrating each component and how they interact. After viewing this an essay style quiz is available for users to take to demonstrate their understanding. Each of the questions on this quiz is derived directly from the learning objects for each page itself.</p>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>

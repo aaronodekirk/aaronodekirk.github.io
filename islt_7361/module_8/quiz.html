@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+          <h2>4/4</h2>
+        </div>
+
+        <div id="nav">
+            <div class="round rotate" title="back">
+                <img src="nav-arrow.png" title="putting it together" onclick="nav('putting_it_together.html')" alt="nav icon"/>
+            </div>
+            <div class="round" title="next">
+                <img src="nav-arrow.png" title = "about" onclick="nav('about.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <div id="mobile-wrapper">
+            <a id="mobile-nav">
+            <div id="hamburger">
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+            </div>
+            </a>
+          <div id="menu" style="display:none">
+              <a class="inactive" href="index.html">Basic Components of Computers</a>
+              <a class="inactive" href="why_bits.html">Why Bits?</a>
+              <a class="inactive" href="putting_it_together.html">Putting it Together</a>
+              <a class="active" href="quiz.html">Quiz</a>
+              <a class="inactive" href="about.html">About</a>
+          </div>
+        </div>
+        <main style="display:none">
+            <h2>Quiz</h2>
+            <h3>Directions</h3>
+            <p>Please take the quiz below. Please note that if you leave this page your answers will not be saved. You will be able to submit a maximum of 1 responses. Your email address will be recorded. You will need to scroll to see the entire quiz</p>
+            <a class="button" href="https://goo.gl/forms/e7kSCaXXSjnuvrxg2" target="_blank">Open form in new tab</a>
+            <div style="text-align:center">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctRzRClDEnuvp3A4RJLHxT1EwCArlEIqhsoXxqkqW_inN_TQ/viewform?embedded=true" width="800" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>

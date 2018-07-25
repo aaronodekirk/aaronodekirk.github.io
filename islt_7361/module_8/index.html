@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+          <h2>1/4</h2>
+        </div>
+    <div id="mobile-wrapper">
+        <a id="mobile-nav" href="javascript:void(0);" onclick="menu()">
+        <div id="hamburger">
+          <div class="mobile-menu"></div>
+          <div class="mobile-menu"></div>
+          <div class="mobile-menu"></div>
+        </div>
+        </a>
+      <div id="menu" style="display:none">
+          <a class="active" href="index.html">Basic Components of Computers</a>
+          <a class="inactive" href="why_bits.html">Why Bits?</a>
+          <a class="inactive" href="putting_it_together.html">Putting it Together</a>
+          <a class="inactive" href="quiz.html">Quiz</a>
+          <a class="inactive" href="about.html">About</a>
+      </div>
+
+    </div>
+        <main>
+
+        <div id="nav">
+            <div class="round" title="next">
+                <img src="nav-arrow.png" title="why_bits" onclick="nav('why_bits.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <main style="display:none">
+            <h2>Basic Components of Computers</h2>
+            <h3>Purpose</h3>
+            <p>The purpose of this interactive site is to expose you to the fundamental components of computers, concepts around why we use 1's and 0's in computing, and how different components interact to make the devices we use today. Navigate through this site using either the arrows at the bottom or navigation menu at the top. Once you have looked through the pages, please take the quiz based on the content on this site. You will have one attempt at the quiz, which will record your email. If you leave the quiz before submitting your answers will not be saved.</p>
+            <h3>Estimated time</h3>
+            <p>20 minutes</p>
+            <h3>Learning Objective</h3>
+            <p>By viewing this graphic, the goal is for you to be able to know and understand the fundamental components of computers and micro-controllers, however the focus will be on computers.</p>
+            <h3>Instructions</h3>
+            <p>Please review the following images and take notes on their components. You will see this image referenced in other places during this lesson</p>
+            <img src="project-1.png" style="max-width:98%"/>
+            <a href="files/project1-image.png" download>Download Original - 320KB</a>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>

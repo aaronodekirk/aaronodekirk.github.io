@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+          <h2>3/4</h2>
+        </div>
+
+        <div id="nav">
+            <div class="round rotate" title="back">
+                <img src="nav-arrow.png" title = "why bits?" onclick="nav('why_bits.html')" alt="nav icon"/>
+            </div>
+            <div class="round" title="next">
+                <img src="nav-arrow.png" title = "quiz" onclick="nav('quiz.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <div id="mobile-wrapper">
+            <a id="mobile-nav">
+            <div id="hamburger">
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+            </div>
+            </a>
+          <div id="menu" style="display:none">
+              <a class="inactive" href="index.html">Basic Components of Computers</a>
+              <a class="inactive" href="why_bits.html">Why Bits?</a>
+              <a class="active" href="putting_it_together.html">Putting it Together</a>
+              <a class="inactive" href="quiz.html">Quiz</a>
+              <a class="inactive" href="about.html">About</a>
+          </div>
+        </div>
+        <main style="display:none">
+            <h2>Putting it Together</h2>
+            <h3>Learning Objective</h3>
+            <p>By watching this video you will be able to explain how the different components of computers interact to form what we know and use today</p>
+            <h3>Instructions</h3>
+            <p>Please watch the video below and be prepared to explain how the different components interact. When you're ready to move on click the "next" arrow at the bottom to proceed to the quiz. Please note, your answers will not be saved if you exit the quiz.</p>
+            <a class="button" href="https://youtu.be/0gDlJUYkpYk" target="_blank">Open video in new tab</a>
+            <div style="text-align:center">
+            <iframe width="480" height="270" src="https://www.youtube.com/embed/0gDlJUYkpYk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>

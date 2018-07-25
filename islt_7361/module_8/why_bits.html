@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="helper.js"></script>
+    </head>
+    <body>
+        <div class="header">
+          <h1>Fundamentals of Computing</h1>
+          <h2>2/4</h2>
+        </div>
+        <div id="mobile-wrapper">
+            <a id="mobile-nav">
+            <div id="hamburger">
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+              <div class="mobile-menu"></div>
+            </div>
+            </a>
+          <div id="menu" style="display:none">
+              <a class="inactive" href="index.html">Basic Components of Computers</a>
+              <a class="active" href="why_bits.html">Why Bits?</a>
+              <a class="inactive" href="putting_it_together.html">Putting it Together</a>
+              <a class="inactive" href="quiz.html">Quiz</a>
+              <a class="inactive" href="about.html">About</a>
+          </div>
+        </div>
+
+        <div id="nav">
+            <div class="round rotate" title="back">
+                <img src="nav-arrow.png" title="basic components" onclick="nav('index.html')" alt="nav icon"/>
+            </div>
+           <div class="round" title="next">
+                <img src="nav-arrow.png" title="putting it together" onclick="nav('putting_it_together.html')" alt="nav icon"/>
+            </div>
+        </div>
+        <main style="display:none">
+            <h2>Why Bits?</h2>
+            <h3>Learning Objective</h3>
+            <p>By listening to this short audio clip you will be able to recall and explain why we use 1's and 0's in computers to represent information.</p>
+            <h3>Instructions</h3>
+            <p>Please listen to this audio clip, you will be expected to be able to explain why we use 1's and 0's in computing instead of other number systems.</p>
+            <audio controls src="why_bits.mp3"> Why Bits?</audio>
+            <h3>Script</h3>
+            <p>So you know by now that we use 1’s and 0’s in computing to store and retrieve information. But why 1’s and 0’s. Why only two options? Surely it would be better to have more than 2. 3 options would allow for something between true and false. And base 10 would let us do math the same way as the rest of the world.</p>
+            <p>There are a number of answers but a predominant one comes down to voltage and current. So let’s consider a lightswitch. We’ll consider turning the light on a 1 and off a 0. There are two possible energy states on or off. If you were trying to measure this objectively it would be fairly easy to know when the lightbulb is on or off. There is little question.</p>
+            <p>But Let’s say we try to add a 3rd state, somewhere in between. Again we could probably measure this but we’re more likely to make a mistake. Let’s add a 4th state, now we’re almost definitely going to be making mistakes trying to figure out what brightness setting we’re in. What about 10. Imagine trying to pick accurately 100% of the time between 10 different brightness settings. It is almost infinitely more challenging than simply between 1 and 0, where we’re almost certain to not make a mistake.
+            </p>
+            <p>This example illustrates why we use 1 and 0 in a computer. Since we use electricity and the state of something having more states makes in increasingly more likely to make a mistake. Sure we’d like to wake up with an extra million in our bank account, but we would be up in arms if our bank account got zeroed out. This would be almost a certainty when dealing with large amounts of data.
+            </p>
+            <p>So, at the end of the day having 2 states, on or off, makes it far far less likely we will make an error. Thus we have bits as 1 or 0.</p>
+            <div class="spacer"></div>
+        </main>
+    </body>
+    <script>
+        function nav(destination) {
+            $("main").slideUp(400);
+            setTimeout(function(){window.open(destination,"_self")},400);
+        }
+        $("#mobile-wrapper").on('click',function(){
+            var status = document.getElementById('menu').style.display;
+            console.log(status);
+            if(status=="none") {
+                $("#menu").slideDown(400);
+            }
+            else {
+                $("#menu").slideUp(400);
+            }
+        });
+        $(document).ready($("main").slideDown(600))
+    </script>
+</html>
