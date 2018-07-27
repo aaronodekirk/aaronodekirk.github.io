@@ -1,0 +1,19 @@
+form {
+    display:block;
+    margin-left:10vw;
+}
+@media only screen and (max-width: 900px) {
+    form h3 {
+        text-align:left;
+    }
+    form {
+        margin:0px;
+    }
+    input, textarea {
+        padding:10px;
+        border: 1px solid #4D8414;
+        border-radius:5px;
+        max-width:80%;
+    }
+
+}
